@@ -1,0 +1,42 @@
+###
+### A complete description of a Prefect Deployment for flow 'say-hello'
+###
+name: say_hello_deployment
+description: null
+version: a84f0366ef9f78ce74be0fb32fc8a3fe
+# The work queue that will handle this deployment's runs
+work_queue_name: default
+work_pool_name: null
+tags: []
+parameters: {}
+schedule: null
+is_schedule_active: null
+infra_overrides: {}
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  block_type_slug: process
+  _block_type_slug: process
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: say-hello
+manifest_path: null
+storage: null
+path: /Users/danielgaio/Documents/GitHub/prefect-study/getting-started
+entrypoint: prefect_studies.py:say_hello
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties: {}
+  required: null
+  definitions: null
+timestamp: '2023-10-28T20:28:26.365265+00:00'
+triggers: []
+enforce_parameter_schema: null
