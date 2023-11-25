@@ -38,13 +38,21 @@
 
 # This 'default' agent is just one agent that is on the default-work-pool. You can create your own agents and pools.
 
+# Prefect cloud
+# Connect to cloud server:
 
-from hmac import new
+# > prefect cloud login
+
+# If browser login fails, create api key manually and login
+
 from prefect import flow, task
+from prefect.blocks.system import String
+
+string_block = String.load("future-nba-champs")
 
 @task
 def create_message():
-    msg = "Hello world from prefect!"
+    msg = "Hello world from prefect!" + string_block.value
     return msg
 
 @flow
